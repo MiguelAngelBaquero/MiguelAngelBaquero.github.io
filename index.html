@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Miguel Ángel Baquero</title>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <figure class="logo">
+                <img src="images/logo.png" alt="Logo" height="50">
+            </figure>
+            <nav class="menu">
+                <ol>
+                    <li>
+                        <a href="#portafolio">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href="#experiencia">Experiencia</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Trabajemos juntos</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Hola, soy <strong>Miguel Ángel Baquero</strong>, <br>desarrollador de <strong>páginas web</strong> <br>y <strong>aplicaciones móviles</strong>.
+            </h1>
+            <img class="hero-image" src="images/hero3.jpg" alt="Imagen principal del sitio" width="500" height="300">
+        </div>
+    </section>
+    <section id="portafolio" class="portfolio">
+        <div class="container">
+            <h2>Portafolio (Proyectos destacados)</h2>
+            <article class="project">
+                <div class="project-details">
+                        <h3 class="project-title">Desarrollo de una alerta de pánico para notificar eventos de robo</h3>
+                        <h6 class="project-course">Android + Java Backend</h6>
+                        <p class="project-date"><small><strong>Fecha:</strong> 31/05/2019</small></p>
+                        <p class="project-url"><small><strong>Puedes verlo en: </strong>DOI</small></p>
+                        <p class="project-description">Prototipo de alarma de pánico a través de una aplicación móvil para teléfonos inteligentes Android, capaz de notificar incidentes de robos 
+                            al Servicio Integrado de Seguridad ECU 911 y a una aplicación desarrollada en Java dentro de un servidor. Dicha alarma de pánico la activa 
+                            el usuario a través de una combinación de botones físicos del teléfono inteligente, en ese instante se envía la información del usuario 
+                            al ECU911 y al servidor implementado, el cual activará un clúster de cámaras para videovigilancia y enviará una notificación por correo 
+                            electrónico a una persona encargada del monitoreo, quien podrá observar a través de un enlace lo que está sucediendo en el lugar de los 
+                            hechos y poder de alguna manera socorrer a la víctima.</p>
+                </div>
+                <figure class="project-imageContainer">
+                    <img src="images/project1.png" alt="Proyecto seguridad" width="500" class="project-image">
+                </figure>
+            </article>
+        </div>
+    </section>
+    <div class="container">
+        <h2 class="event-list-title">Más sobre mi experiencia</h2>
+    </div>
+    <section id="eventos" class="event-list">
+        <div class="container">
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img src="images/ICAETT.jpg" alt="ICAETT 2019" class="event-image">
+                </figure>
+                <div class="event-detail">
+                    <h3 class="event-title">ICAETT 2019, Quito-Ecuador</h3>
+                    <h4 class="event-title">Congreso Internacional sobre Avances en Nuevas Tendencias y Tecnologías</h4>
+                    <p class="event-description">El Congreso Internacional sobre Avances en Nuevas Tendencias y Tecnologías (ICAETT) busca reunir a los mejores investigadores y 
+                        profesionales que trabajan en diferentes ámbitos en el campo de la informática para intercambiar sus conocimientos y discutir las 
+                        perspectivas de desarrollo y colaboración.</p>
+                    <a href="http://icaett.snotracg.org" target="_blank" class="event-url">Página web del evento</a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="contacto" class="contact">
+        <div class="container">
+            <form action="" class="form-email">
+                <h3>¿Creamos algo juntos?</h3>
+                <input type="text" placeholder="Déjame tu email" id="email">
+                <button>Enviar</button>
+            </form>
+            <div class="social">
+                <a href="https://twitter.com/mickey_migue" class="social-link twitter" target="_blank"></a>
+                <a href="https://www.facebook.com/mickey.migue" class="social-link facebook" target="_blank"></a>
+                <a href="https://github.com/MiguelAngelBaquero" class="social-link github" target="_blank"></a>
+                <a href="https://www.instagram.com/mickey_migue" class="social-link instagram" target="_blank"></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div>
+            <p>Desarrollo frontend <img src="images/favicon.png" alt="icon" width="25"></p>
+        </div>
+        <div>
+            <p>Designed with &hearts; by <a href="https://twitter.com/thespianartist" target="_blank">@thespianartist</a></p>
+        </div>
+    </footer>
+</body>
+</html>
