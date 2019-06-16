@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
@@ -55,7 +56,7 @@
                             hechos y poder de alguna manera socorrer a la víctima.</p>
                 </div>
                 <figure class="project-imageContainer">
-                    <img src="images/project1.png" alt="Proyecto seguridad" width="500" class="project-image">
+                    <img src="images/project1.png" alt="Proyecto seguridad" class="project-image">
                 </figure>
             </article>
         </div>
@@ -88,20 +89,54 @@
                 <button>Enviar</button>
             </form>
             <div class="social">
-                <a href="https://twitter.com/mickey_migue" class="social-link twitter" target="_blank"></a>
-                <a href="https://www.facebook.com/mickey.migue" class="social-link facebook" target="_blank"></a>
-                <a href="https://github.com/MiguelAngelBaquero" class="social-link github" target="_blank"></a>
-                <a href="https://www.instagram.com/mickey_migue" class="social-link instagram" target="_blank"></a>
+                <a href="https://twitter.com/mickey_migue" class="social-link icon-twitter" target="_blank"></a>
+                <a href="https://www.facebook.com/mickey.migue" class="social-link icon-facebook" target="_blank"></a>
+                <a href="https://github.com/MiguelAngelBaquero" class="social-link icon-github" target="_blank"></a>
+                <a href="https://www.instagram.com/mickey_migue" class="social-link icon-instagram" target="_blank"></a>
             </div>
         </div>
     </section>
     <footer class="footer">
         <div>
-            <p>Desarrollo frontend <img src="images/favicon.png" alt="icon" width="25"></p>
+            <p>Desarrollo web y aplicaciones móviles <img src="images/favicon.png" alt="icon" width="100"></p>
         </div>
         <div>
-            <p>Designed with &hearts; by <a href="https://twitter.com/thespianartist" target="_blank">@thespianartist</a></p>
+            <p>Designed with 💚 by <a href="https://twitter.com/thespianartist" target="_blank">@thespianartist</a></p>
         </div>
     </footer>
+    <script>
+        //consulta de un mediaQuery para JavaScript
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        // crear constante para identificar el menu
+        const menu = document.querySelector('.menu');
+        // crear constante para identificar el menu dentro del codigo html
+        const burgerButton = document.querySelector('#burger-menu');
+        //invocar a un listener cuando la resolucion de la pantalla es menor a 768px
+        ipad.addListener(validation);
+        //funcion para de validacion para activar la escucha del boton menu
+        function validation(event) {
+            console.log("Listener: ", event.matches);
+            //condicionante para agregar o quitar el listener del menu
+            if (event.matches) {
+                //Listener para identificar si se hace click o no al boton
+                burgerButton.addEventListener('click', hideShow);
+            } else {
+                burgerButton.removeEventListener('click', hideShow);
+            }
+        }
+        //el event listener se activa mediante un resize, por lo cual es necesario volver a invocar a la funcion
+        validation(ipad);
+        //funcion que se activa una vez que se identifica el click en el menu
+        function hideShow() {
+            //condicion para determinar si 'is-active' se encuentra dentro del codigo o no
+            if (menu.classList.contains('is-active')) {
+                //remover del codigo html 'is-active'
+                menu.classList.remove('is-active');
+            } else {
+                //agregar al codigo html 'is-active'
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>
